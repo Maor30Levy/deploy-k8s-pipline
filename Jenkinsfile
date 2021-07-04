@@ -11,15 +11,6 @@ pipeline {
                 '''
             }
         }
-
-        stage('Fetch') {
-            steps {
-                    sh '''
-                    ./stages/fetch/fetch.sh
-                '''
-                
-            }
-        }
         
         stage('Deploy') {
             steps {
