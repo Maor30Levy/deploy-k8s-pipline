@@ -21,15 +21,5 @@ pipeline {
             }
         }
         
-        stage('Clean-up') {
-            steps {
-                    sh '''
-                    ./stages/cleanup/cleanup.sh
-                '''
-                
-            }
-        }
-
-        
     }
 }
