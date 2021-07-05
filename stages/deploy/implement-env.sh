@@ -12,6 +12,8 @@ export AWS_ACCESS_KEY_ID=$(sed -n '11p' /tmp/.project_name)
 export AWS_SECRET_ACCESS_KEY=$(sed -n '12p' /tmp/.project_name)
 export MONGODB=$(sed -n '13p' /tmp/.project_name)
 
+cat /tmp/.project_name
+
 sed -i "s/!!CLIENT_PORT!!/$CLIENT_PORT/g" ./$PROJECT/templates/env.yaml 
 sed -i "s/!!SERVER_PORT!!/$SERVER_PORT/g" ./$PROJECT/templates/env.yaml
 sed -i "s/!!WORKER_PORT!!/$WORKER_PORT/g" ./$PROJECT/templates/env.yaml
