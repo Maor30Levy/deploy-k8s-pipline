@@ -12,15 +12,15 @@ export AWS_ACCESS_KEY_ID=$(sed -n '11p' /tmp/.project_name)
 export AWS_SECRET_ACCESS_KEY=$(sed -n '12p' /tmp/.project_name)
 export MONGODB=$(sed -n '13p' /tmp/.project_name)
 
-sed "s/!!CLIENT_PORT!!/$CLIENT_PORT/g" ./$PROJECT/templates/env.yaml >> ./$PROJECT/templates/env.yaml
-sed "s/!!SERVER_PORT!!/$SERVER_PORT/g" ./$PROJECT/templates/env.yaml >> ./$PROJECT/templates/env.yaml
-sed "s/!!WORKER_PORT!!/$WORKER_PORT/g" ./$PROJECT/templates/env.yaml >> ./$PROJECT/templates/env.yaml
-sed "s/!!PARSER_PORT!!/$PARSER_PORT/g" ./$PROJECT/templates/env.yaml >> ./$PROJECT/templates/env.yaml
-sed "s/!!REDIS_PORT!!/$REDIS_PORT/g" ./$PROJECT/templates/env.yaml >> ./$PROJECT/templates/env.yaml
-sed "s/!!SERVER_HOST!!/$SERVER_HOST/g" ./$PROJECT/templates/env.yaml >> ./$PROJECT/templates/env.yaml
-sed "s/!!WORKER_HOST!!/$WORKER_HOST/g" ./$PROJECT/templates/env.yaml >> ./$PROJECT/templates/env.yaml
-sed "s/!!PARSER_HOST!!/$PARSER_HOST/g" ./$PROJECT/templates/env.yaml >> ./$PROJECT/templates/env.yaml
-sed "s/!!REDIS_HOST!!/$REDIS_HOST/g" ./$PROJECT/templates/env.yaml >> ./$PROJECT/templates/env.yaml
-sed "s/!!AWS_ACCESS_KEY_ID!!/$AWS_ACCESS_KEY_ID/g" ./$PROJECT/templates/env.yaml >> ./$PROJECT/templates/env.yaml
-sed "s/!!AWS_SECRET_ACCESS_KEY!!/$AWS_SECRET_ACCESS_KEY/g" ./$PROJECT/templates/env.yaml >> ./$PROJECT/templates/env.yaml
-sed "s/!!MONGODB!!/$MONGODB/g" ./$PROJECT/templates/env.yaml >> ./$PROJECT/templates/env.yaml
+sed -i "s/!!CLIENT_PORT!!/$CLIENT_PORT/g" ./$PROJECT/templates/env.yaml 
+sed -i "s/!!SERVER_PORT!!/$SERVER_PORT/g" ./$PROJECT/templates/env.yaml
+sed -i "s/!!WORKER_PORT!!/$WORKER_PORT/g" ./$PROJECT/templates/env.yaml
+sed -i "s/!!PARSER_PORT!!/$PARSER_PORT/g" ./$PROJECT/templates/env.yaml
+sed -i "s/!!REDIS_PORT!!/$REDIS_PORT/g" ./$PROJECT/templates/env.yaml
+sed -i "s/!!SERVER_HOST!!/$SERVER_HOST/g" ./$PROJECT/templates/env.yaml
+sed -i "s/!!WORKER_HOST!!/$WORKER_HOST/g" ./$PROJECT/templates/env.yaml
+sed -i "s/!!PARSER_HOST!!/$PARSER_HOST/g" ./$PROJECT/templates/env.yaml
+sed -i "s/!!REDIS_HOST!!/$REDIS_HOST/g" ./$PROJECT/templates/env.yaml
+sed -i "s/!!AWS_ACCESS_KEY_ID!!/$AWS_ACCESS_KEY_ID/g" ./$PROJECT/templates/env.yaml
+sed -i "s/!!AWS_SECRET_ACCESS_KEY!!/$AWS_SECRET_ACCESS_KEY/g" ./$PROJECT/templates/env.yaml
+sed -i "s/!!MONGODB!!/$MONGODB/g" ./$PROJECT/templates/env.yaml
